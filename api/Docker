@@ -1,0 +1,16 @@
+FROM wordpress:php8.2-fpm
+
+# Set working directory
+WORKDIR /wordpress
+
+# Adjust PHP settings (if needed)
+COPY custom.ini $PHP_INI_DIR/conf.d/
+
+# Move the entire wp-content directory over
+COPY /wordpress/wp-content/ ./wp-content/
+
+# Copy the wp_config file over
+COPY /wordpress/wp-config.php ./
+
+# Copy custom Nginx configuration
+COPY /nginx/conf.d/nginx.conf /etc/nginx/nginx.conf

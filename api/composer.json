@@ -1,0 +1,26 @@
+{
+    "name": "jamesfloss/jimfloss",
+    "description": "WordPress Headless CMS",
+    "type": "project",
+    "require": {
+        "johnpbloch/wordpress-core-installer": "dev-master",
+        "johnpbloch/wordpress-core": "dev-master"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Jamesfloss\\Jimfloss\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jim Floss"
+        }
+    ],
+    "minimum-stability": "dev",
+    "config": {
+        "allow-plugins": {
+            "johnpbloch/wordpress-core-installer": true
+        }
+    }
+}
